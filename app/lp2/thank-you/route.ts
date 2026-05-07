@@ -13,5 +13,5 @@ export async function POST(req: NextRequest) {
   const params = new URLSearchParams();
   if (firstName) params.set('name', firstName.toString().split(' ')[0]);
 
-  return NextResponse.redirect(new URL(`/lp2/thank-you?${params.toString()}`, req.url));
+  return NextResponse.redirect(new URL(`/thank-you?${params.toString()}`, req.url));
 }
