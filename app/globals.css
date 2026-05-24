@@ -709,3 +709,23 @@ a.ft-c-item:hover{color:#fff;}
   .col-lg-7{flex:0 0 58.333333%;max-width:58.333333%;}
   .offset-lg-1{margin-left:8.333333%;}
 }
+
+/* /not-a-fit — disqualification page */
+.naf-page{min-height:100vh;display:flex;align-items:center;justify-content:center;background:var(--cream);padding:64px 24px;font-family:var(--font-b);}
+.naf-card{max-width:640px;width:100%;background:#fff;border:1px solid var(--stone);padding:56px 48px;box-shadow:0 1px 0 rgba(24,31,46,.04),0 24px 60px -30px rgba(24,31,46,.18);}
+.naf-eyebrow{display:inline-block;font-family:var(--font-d);font-size:12px;font-weight:600;color:var(--amber);letter-spacing:.16em;text-transform:uppercase;margin-bottom:16px;}
+.naf-h1{font-family:var(--font-d);font-size:clamp(28px,3.6vw,40px);font-weight:700;line-height:1.15;letter-spacing:-.01em;color:var(--ink);margin:0 0 14px;}
+.naf-lede{font-size:16px;line-height:1.65;color:var(--ink-soft);margin:0 0 28px;}
+.naf-list{display:flex;flex-direction:column;gap:18px;margin:0 0 32px;padding:24px 0;border-top:1px solid var(--stone);border-bottom:1px solid var(--stone);}
+.naf-list li{display:flex;gap:14px;align-items:flex-start;}
+.naf-list strong{display:block;font-family:var(--font-d);font-weight:600;color:var(--ink);font-size:15px;line-height:1.4;margin-bottom:4px;}
+.naf-list p{font-size:14px;line-height:1.55;color:var(--ink-muted);margin:0;}
+.naf-bullet{flex-shrink:0;width:22px;height:22px;background:var(--amber-light);color:var(--amber);display:inline-flex;align-items:center;justify-content:center;font-size:10px;margin-top:2px;}
+.naf-next{background:var(--blue-pale);padding:18px 20px;border-left:3px solid var(--blue-light);margin-bottom:32px;}
+.naf-next p{font-size:14px;line-height:1.6;color:var(--ink-soft);margin:0;}
+.naf-next strong{color:var(--ink);font-family:var(--font-d);font-weight:600;}
+.naf-actions{display:flex;gap:12px;margin-bottom:24px;}
+.naf-foot{font-size:13px;color:var(--ink-muted);text-align:center;margin:0;padding-top:8px;border-top:1px solid var(--stone);padding-top:20px;}
+@media(max-width:640px){
+  .naf-card{padding:40px 24px;}
+}

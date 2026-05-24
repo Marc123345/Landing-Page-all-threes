@@ -4,6 +4,10 @@ export function middleware(req: NextRequest) {
   const hostname = req.headers.get('host') || '';
   const subdomain = hostname.split('.')[0].toLowerCase();
 
+  if (req.nextUrl.pathname.startsWith('/not-a-fit')) {
+    return NextResponse.next();
+  }
+
   if (subdomain === 'lp2') {
     const url = req.nextUrl.clone();
     url.pathname = '/lp2' + (req.nextUrl.pathname === '/' ? '' : req.nextUrl.pathname);
