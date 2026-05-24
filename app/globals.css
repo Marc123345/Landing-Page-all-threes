@@ -711,6 +711,26 @@ a.ft-c-item:hover{color:#fff;}
   .offset-lg-1{margin-left:8.333333%;}
 }
 
+/* /thank-you — confirmation page */
+.ty-page{min-height:100vh;display:flex;align-items:center;justify-content:center;background:var(--cream);padding:64px 24px;font-family:var(--font-b);}
+.ty-card{max-width:600px;width:100%;background:#fff;border:1px solid var(--stone);padding:56px 52px;box-shadow:0 1px 0 rgba(24,31,46,.04),0 24px 60px -30px rgba(24,31,46,.18);text-align:center;}
+.ty-icon{width:64px;height:64px;background:var(--oxide-light);color:var(--oxide);border-radius:50%!important;display:inline-flex;align-items:center;justify-content:center;font-size:24px;margin:0 auto 24px;}
+.ty-h1{font-family:var(--font-d);font-size:clamp(26px,3.4vw,36px);font-weight:700;line-height:1.2;letter-spacing:-.01em;color:var(--ink);margin:0 0 16px;}
+.ty-lede{font-size:16px;line-height:1.65;color:var(--ink-soft);margin:0 0 36px;}
+.ty-next{background:var(--blue-pale);padding:28px 28px;border-left:3px solid var(--blue-light);margin-bottom:28px;text-align:left;}
+.ty-next-label{display:block;font-family:var(--font-d);font-size:11px;font-weight:600;color:var(--blue-light);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px;}
+.ty-steps{display:flex;flex-direction:column;gap:18px;list-style:none;padding:0;margin:0;}
+.ty-steps li{display:flex;gap:14px;align-items:flex-start;}
+.ty-step-num{flex-shrink:0;width:26px;height:26px;background:var(--amber);color:#fff;font-family:var(--font-d);font-weight:600;font-size:13px;display:inline-flex;align-items:center;justify-content:center;margin-top:1px;}
+.ty-steps strong{display:block;font-family:var(--font-d);font-weight:600;color:var(--ink);font-size:15px;line-height:1.4;margin-bottom:3px;}
+.ty-steps p{font-size:14px;line-height:1.55;color:var(--ink-muted);margin:0;}
+.ty-closing{font-size:14.5px;line-height:1.65;color:var(--ink-muted);margin:0 0 28px;font-style:italic;}
+.ty-actions{display:flex;justify-content:center;}
+@media(max-width:640px){
+  .ty-card{padding:40px 26px;}
+  .ty-next{padding:22px 20px;}
+}
+
 /* /not-a-fit — disqualification page */
 .naf-page{min-height:100vh;display:flex;align-items:center;justify-content:center;background:var(--cream);padding:64px 24px;font-family:var(--font-b);}
 .naf-card{max-width:600px;width:100%;background:#fff;border:1px solid var(--stone);padding:56px 52px;box-shadow:0 1px 0 rgba(24,31,46,.04),0 24px 60px -30px rgba(24,31,46,.18);}

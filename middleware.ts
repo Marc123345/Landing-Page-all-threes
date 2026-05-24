@@ -4,9 +4,9 @@ export function middleware(req: NextRequest) {
   const hostname = req.headers.get('host') || '';
   const subdomain = hostname.split('.')[0].toLowerCase();
 
-  if (req.nextUrl.pathname.startsWith('/not-a-fit')) {
+  if (req.nextUrl.pathname.startsWith('/not-a-fit') || req.nextUrl.pathname.startsWith('/thank-you')) {
     if (req.method === 'POST') {
-      return NextResponse.redirect(new URL('/not-a-fit', req.url), 303);
+      return NextResponse.redirect(new URL(req.nextUrl.pathname, req.url), 303);
     }
     return NextResponse.next();
   }
