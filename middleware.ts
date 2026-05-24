@@ -5,6 +5,9 @@ export function middleware(req: NextRequest) {
   const subdomain = hostname.split('.')[0].toLowerCase();
 
   if (req.nextUrl.pathname.startsWith('/not-a-fit')) {
+    if (req.method === 'POST') {
+      return NextResponse.redirect(new URL('/not-a-fit', req.url), 303);
+    }
     return NextResponse.next();
   }
 
