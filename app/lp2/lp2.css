@@ -84,7 +84,7 @@
 .lp2-root .hero-arrow-wrap { position: relative; height: 0; width: 100%; overflow: visible; display: flex; justify-content: center; z-index: 5; pointer-events: none; }
 .lp2-root .hero-arrow { position: absolute; top: 0; left: 50%; transform: translateX(-50%) translateY(-50%); animation: hero-arrow-bounce 1.5s ease-in-out infinite; }
 .lp2-root .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; border: 1px solid rgba(232,93,42,.4); padding: 6px 14px; margin-bottom: 22px; font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--primary); font-family: var(--font-display); }
-.lp2-root .form-embed { width: 100%; min-height: 539px; }
+.lp2-root .form-embed { width: 100%; min-height: 539px; padding-top: 60px; }
 .lp2-root .form-embed iframe { display: block; width: 100% !important; min-width: 100% !important; min-height: inherit; border: 0; }
 .lp2-root .hero h1 { font-family: var(--font-display); font-size: clamp(32px, 4.6vw, 52px); font-weight: 800; line-height: 1.08; letter-spacing: -.02em; margin-bottom: 0; color: #fff; }
 .lp2-root .hero p { font-size: 17px; color: rgba(255, 255, 255, .88); margin-bottom: 32px; max-width: 540px; line-height: 1.65; }
