@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Thanks for reaching out",
-  description: "Information about who we serve and what to do next.",
+  title: "We're not the right fit",
+  description: "About who we serve and what to do next.",
   robots: { index: false, follow: false },
 };
 
@@ -11,56 +11,39 @@ export default function NotAFitPage() {
   return (
     <main className="naf-page">
       <section className="naf-card">
-        <span className="naf-eyebrow">PROJECT REVIEW</span>
-        <h1 className="naf-h1">Thanks for reaching out.</h1>
+        <h1 className="naf-h1">We&apos;re not the right fit for this project.</h1>
         <p className="naf-lede">
-          Based on what you shared, your project isn&apos;t a fit for the work
-          we do. Here&apos;s why:
+          Thanks for filling out our form — we appreciate you taking the time
+          and we want to be straight with you.
         </p>
 
-        <ul className="naf-list">
-          <li>
-            <span className="naf-bullet" aria-hidden="true">
-              <i className="fas fa-check" />
-            </span>
-            <div>
-              <strong>We focus exclusively on commercial and industrial properties.</strong>
-              <p>Warehouses, retail, manufacturing, multi-tenant, and similar facilities.</p>
-            </div>
-          </li>
-          <li>
-            <span className="naf-bullet" aria-hidden="true">
-              <i className="fas fa-check" />
-            </span>
-            <div>
-              <strong>Our coating systems are engineered for flat and low-slope roofs.</strong>
-              <p>Silicone restoration isn&apos;t designed for steep-slope or shingled roofs.</p>
-            </div>
-          </li>
-          <li>
-            <span className="naf-bullet" aria-hidden="true">
-              <i className="fas fa-check" />
-            </span>
-            <div>
-              <strong>We don&apos;t currently service residential homes.</strong>
-              <p>Single-family and small residential roofs fall outside our specialty.</p>
-            </div>
-          </li>
-        </ul>
-
-        <div className="naf-next">
+        <div className="naf-body">
           <p>
-            <strong>What we&apos;d suggest:</strong> A local residential roofing
-            contractor will be far better equipped to help with your project.
-            Most reputable companies offer free estimates as well.
+            We specialize in silicone restoration coatings for{" "}
+            <strong>commercial flat and low-slope roofs</strong> — warehouses,
+            retail centers, manufacturing plants, and similar facilities.
+            Residential and steep-slope roofs need a different specialty
+            than ours.
           </p>
         </div>
 
-        <div className="naf-actions">
-          <Link href="/" className="btn-o">Return to homepage</Link>
+        <div className="naf-next">
+          <span className="naf-next-label">What to do next</span>
+          <p>
+            A local residential roofing contractor will be a much better fit
+            for your project. Most offer free estimates, so it&apos;s worth
+            getting two or three before you decide.
+          </p>
         </div>
 
-        <p className="naf-foot">Thanks again for considering us.</p>
+        <p className="naf-closing">
+          If you ever oversee a commercial property that could use our help,
+          we&apos;d love to hear from you.
+        </p>
+
+        <div className="naf-actions">
+          <Link href="/" className="btn-o">Back to homepage</Link>
+        </div>
       </section>
     </main>
   );
