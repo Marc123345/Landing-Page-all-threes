@@ -22,6 +22,12 @@ export function middleware(req: NextRequest) {
     return NextResponse.rewrite(url);
   }
 
+  if (subdomain === 'lp5') {
+    const url = req.nextUrl.clone();
+    url.pathname = '/lp5' + (req.nextUrl.pathname === '/' ? '' : req.nextUrl.pathname);
+    return NextResponse.rewrite(url);
+  }
+
   return NextResponse.next();
 }
 
