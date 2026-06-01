@@ -94,16 +94,12 @@ export default function LandingPage5() {
     return () => io.disconnect();
   }, []);
 
-  // FIXME(lp5): this Jotform ID is still the Roof Coat (lp2) form.
-  // Real lp5 leads will land in the lp2 inbox until this is swapped.
-  // Replace 261265264434456 (in both this handler and the iframe src/id below)
-  // with the lp5-owned Jotform form ID before driving traffic.
   useEffect(() => {
     const s1 = document.createElement("script");
     s1.src = "https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js";
     s1.onload = () => {
       const s2 = document.createElement("script");
-      s2.innerHTML = `window.jotformEmbedHandler("iframe[id='JotFormIFrame-261265264434456']", "https://form.jotform.com/")`;
+      s2.innerHTML = `window.jotformEmbedHandler("iframe[id='JotFormIFrame-261514338806458']", "https://form.jotform.com/")`;
       document.body.appendChild(s2);
     };
     document.body.appendChild(s1);
@@ -183,12 +179,12 @@ export default function LandingPage5() {
           </div>
           <div className="form-embed">
             <iframe
-              id="JotFormIFrame-261265264434456"
-              title="Roof Coating Deal Request"
+              id="JotFormIFrame-261514338806458"
+              title="Landing Page 5"
               onLoad={() => window.parent.scrollTo(0, 0)}
               allowTransparency={true}
               allow="geolocation; microphone; camera; fullscreen; payment"
-              src="https://form.jotform.com/261265264434456"
+              src="https://form.jotform.com/261514338806458"
               frameBorder={0}
               style={{ minWidth: "100%", maxWidth: "100%", height: "539px", border: "none" }}
               scrolling="no"
