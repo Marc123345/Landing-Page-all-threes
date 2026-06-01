@@ -16,6 +16,12 @@ export function middleware(req: NextRequest) {
     return NextResponse.rewrite(url);
   }
 
+  if (subdomain === 'brightshield') {
+    const url = req.nextUrl.clone();
+    url.pathname = '/brightshield' + (req.nextUrl.pathname === '/' ? '' : req.nextUrl.pathname);
+    return NextResponse.rewrite(url);
+  }
+
   return NextResponse.next();
 }
 
