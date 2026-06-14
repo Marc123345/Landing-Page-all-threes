@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useRef, MouseEvent } from "react";
 
-export default function LandingPage() {
+export default function LandingPage({ brand = "Roof Coat" }: { brand?: string }) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -242,7 +242,7 @@ export default function LandingPage() {
         <div className="nav-i">
           <a href="#" className="nav-br" onClick={smoothScroll}>
             <LogoMark size={34} />
-            <span className="nav-br-txt">Roof Coat</span>
+            <span className="nav-br-txt">{brand}</span>
           </a>
         </div>
       </nav>
@@ -572,7 +572,7 @@ export default function LandingPage() {
         <div className="ft-btm">
           <div className="wrap">
             <div className="ft-btm-i">
-              <span className="footer-lg">© 2026 Roof Coat. All Rights Reserved.</span>
+              <span className="footer-lg">© 2026 {brand}. All Rights Reserved.</span>
             </div>
           </div>
         </div>

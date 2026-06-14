@@ -28,6 +28,24 @@ export function middleware(req: NextRequest) {
     return NextResponse.rewrite(url);
   }
 
+  if (subdomain === 'summit') {
+    const url = req.nextUrl.clone();
+    url.pathname = '/summit-roofing' + (req.nextUrl.pathname === '/' ? '' : req.nextUrl.pathname);
+    return NextResponse.rewrite(url);
+  }
+
+  if (subdomain === 'bcs') {
+    const url = req.nextUrl.clone();
+    url.pathname = '/bcs' + (req.nextUrl.pathname === '/' ? '' : req.nextUrl.pathname);
+    return NextResponse.rewrite(url);
+  }
+
+  if (subdomain === 'lux') {
+    const url = req.nextUrl.clone();
+    url.pathname = '/lux-roofing' + (req.nextUrl.pathname === '/' ? '' : req.nextUrl.pathname);
+    return NextResponse.rewrite(url);
+  }
+
   return NextResponse.next();
 }
 
