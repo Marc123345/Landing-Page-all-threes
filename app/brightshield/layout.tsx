@@ -1,10 +1,9 @@
-import type { Metadata } from 'next';
-import '../lp2/lp2.css';
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Brightshield — Commercial Roof Coating Specialists | Free Inspection',
+  title: "Bright Shield Coatings — Roof Coating Specialists | Free Inspection",
   description:
-    "Brightshield restores commercial roofs with professional silicone coatings — save up to 75% vs full replacement. 20-year manufacturer warranty. Book a free on-site inspection.",
+    "Save 50-70% vs roof replacement with professional silicone roof coating. Manufacturer warranty up to 20 years. Free inspection.",
 };
 
 export default function BrightshieldLayout({ children }: { children: React.ReactNode }) {

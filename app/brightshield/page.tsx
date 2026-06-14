@@ -1,9 +1,5 @@
-import LandingPageBrightshield from './LandingPageBrightshield';
+import LandingPage from "../LandingPage";
 
 export default function BrightshieldPage() {
-  return (
-    <div className="lp2-root">
-      <LandingPageBrightshield />
-    </div>
-  );
+  return <LandingPage brand="Bright Shield Coatings" formId="261644247189061" />;
 }
