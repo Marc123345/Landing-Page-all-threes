@@ -46,6 +46,12 @@ export function middleware(req: NextRequest) {
     return NextResponse.rewrite(url);
   }
 
+  if (subdomain === '5starroofing') {
+    const url = req.nextUrl.clone();
+    url.pathname = '/5starroofing' + (req.nextUrl.pathname === '/' ? '' : req.nextUrl.pathname);
+    return NextResponse.rewrite(url);
+  }
+
   return NextResponse.next();
 }
 
