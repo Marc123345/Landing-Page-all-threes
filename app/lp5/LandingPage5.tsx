@@ -182,7 +182,6 @@ export default function LandingPage5() {
               id="JotFormIFrame-261514338806458"
               title="Landing Page 5"
               onLoad={() => window.parent.scrollTo(0, 0)}
-              allowTransparency={true}
               allow="geolocation; microphone; camera; fullscreen; payment"
               src="https://form.jotform.com/261514338806458"
               frameBorder={0}

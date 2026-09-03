@@ -38,7 +38,6 @@ export default function LP3Page() {
               id="JotFormIFrame-262455881771063"
               title="Roof Coat Pros"
               onLoad={() => window.parent.scrollTo(0, 0)}
-              allowTransparency={true}
               allow="geolocation; microphone; camera; fullscreen; payment"
               src="https://form.jotform.com/262455881771063"
               frameBorder={0}
