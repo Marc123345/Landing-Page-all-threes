@@ -172,8 +172,12 @@ img{max-width:100%;display:block;margin:0;border:0;}a{text-decoration:none;color
 .hf h3{font-family:var(--font-d);font-size:22px;font-weight:700;color:var(--ink);margin:0 0 8px;letter-spacing:-.02em;line-height:1.15;}
 .hf .fs{font-family:var(--font-b);font-size:14px;color:var(--ink-muted);margin:0 0 18px;line-height:1.5;}
 .hf-iframe{width:100%;min-width:100%;max-width:100%;border:none;display:block;min-height:640px;background:transparent;}
-.form-embed{width:100%;min-height:539px;position:relative;z-index:5;background:transparent;padding:0;}
-.form-embed iframe{display:block;width:100%!important;min-width:100%!important;min-height:inherit;border:0;}
+/* Jotform card forms always render a .jfWelcome-wrapper banner across the top of the
+   document showing the form title. It cannot be switched off from the form settings
+   (the welcome page is disabled, yet the wrapper still paints), so it is cropped off
+   here: the iframe is pulled up by --jf-crop inside a clipping container. */
+.form-embed{--jf-crop:132px;--jf-view:539px;width:100%;height:var(--jf-view);position:relative;z-index:5;background:transparent;padding:0;overflow:hidden;}
+.form-embed iframe{display:block;width:100%!important;min-width:100%!important;border:0;height:calc(var(--jf-view) + var(--jf-crop))!important;margin-top:calc(-1 * var(--jf-crop));}
 #JotFormIFrame-261243265404147{width:100%!important;min-width:100%!important;}
 .fg{margin-bottom:12px;}
 .fg-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px;}
@@ -685,10 +689,10 @@ a.ft-c-item:hover{color:#fff;}
 
   .hero-stack{gap:0;}
   .hero-cut svg{height:40px!important;}
-  .form-embed{min-height:480px;}
+  .form-embed{--jf-view:480px;}
 }
 @media(max-width:480px){
-  .form-embed{min-height:400px;}
+  .form-embed{--jf-view:400px;--jf-crop:104px;}
 }
 @media(max-width:380px){
   .cs-grid{grid-template-columns:1fr;}
