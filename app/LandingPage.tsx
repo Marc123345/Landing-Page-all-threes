@@ -1,10 +1,14 @@
 "use client";
 
 import { useEffect, useState, useRef, MouseEvent } from "react";
+import MultiStepForm from "./components/MultiStepForm";
 
 export default function LandingPage({
   brand = "Roof Coat",
-  formId = "261243544700045",
+  // formId is no longer used: the Jotform embeds were all dead ("Form is
+  // missing") and were replaced by MultiStepForm. Kept so the brand pages that
+  // still pass it do not break; safe to remove once those are updated.
+  formId: _formId = "261243544700045",
 }: {
   brand?: string;
   formId?: string;
@@ -138,18 +142,6 @@ export default function LandingPage({
     const delta = slide ? slide.offsetWidth + 14 : 320;
     track.scrollBy({ left: delta * dir, behavior: "smooth" });
   };
-
-  useEffect(() => {
-    const s1 = document.createElement("script");
-    s1.src = "https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js";
-    s1.onload = () => {
-      const s2 = document.createElement("script");
-      s2.innerHTML = `window.jotformEmbedHandler("iframe[id='JotFormIFrame-${formId}']", "https://form.jotform.com/")`;
-      document.body.appendChild(s2);
-    };
-    document.body.appendChild(s1);
-    return () => s1.remove();
-  }, []);
 
   useEffect(() => {
     const io = new IntersectionObserver(
@@ -291,17 +283,7 @@ export default function LandingPage({
               </div>
             </div>
             <div className="form-embed">
-              <iframe
-                id={`JotFormIFrame-${formId}`}
-                title="Roof Coating Deal Request"
-                onLoad={() => window.parent.scrollTo(0, 0)}
-                allowTransparency={true}
-                allow="geolocation; microphone; camera; fullscreen; payment"
-                src={`https://form.jotform.com/${formId}`}
-                frameBorder={0}
-                style={{ minWidth: "100%", maxWidth: "100%", height: "539px", border: "none" }}
-                scrolling="no"
-              />
+              <MultiStepForm source="lp1" brand={brand} />
             </div>
           </div>
         </div>

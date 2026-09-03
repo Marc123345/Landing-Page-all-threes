@@ -1,0 +1,179 @@
+/* Multi-step lead form — replaces the Jotform iframes on LP1, LP2 and LP3.
+   Renders as a light card so it reads the same over every hero treatment. */
+
+.msf,
+.msf--done {
+  width: 100%;
+  background: #fff;
+  border: 1px solid var(--stone-dark, #D0CBC3);
+  padding: 26px 26px 22px;
+  text-align: left;
+  font-family: var(--font-b, system-ui, sans-serif);
+  color: var(--ink, #181F2E);
+  box-shadow: 0 22px 60px rgba(24, 31, 46, .18);
+}
+
+/* progress */
+.msf-head { margin-bottom: 22px; }
+.msf-steps {
+  display: flex;
+  gap: 8px;
+  list-style: none;
+  margin: 0 0 12px;
+  padding: 0;
+}
+.msf-steps li {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex: 1;
+  min-width: 0;
+  font-family: var(--font-m, system-ui, sans-serif);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--ink-muted, #666);
+}
+.msf-step-dot {
+  flex: 0 0 auto;
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--stone-dark, #D0CBC3);
+  font-size: 11px;
+  letter-spacing: 0;
+  color: var(--ink-muted, #666);
+  background: var(--cream, #F7F5F1);
+}
+.msf-step-label { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.msf-steps li.is-current { color: var(--ink, #181F2E); }
+.msf-steps li.is-current .msf-step-dot {
+  background: var(--amber, #E85D2A);
+  border-color: var(--amber, #E85D2A);
+  color: #fff;
+}
+.msf-steps li.is-done .msf-step-dot {
+  background: var(--ink, #181F2E);
+  border-color: var(--ink, #181F2E);
+  color: #fff;
+}
+.msf-bar { height: 3px; background: var(--stone, #E5E2DB); overflow: hidden; }
+.msf-bar span {
+  display: block;
+  height: 100%;
+  background: var(--amber, #E85D2A);
+  transition: width .3s ease;
+}
+
+/* fields */
+.msf-panel { display: block; }
+.msf-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.msf-field { margin-bottom: 14px; }
+.msf-field--short { max-width: 200px; }
+.msf-field label {
+  display: block;
+  font-family: var(--font-m, system-ui, sans-serif);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--ink-muted, #666);
+  margin-bottom: 5px;
+}
+.msf-field input,
+.msf-field select {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid var(--stone-dark, #D0CBC3);
+  background: var(--cream, #F7F5F1);
+  font-family: inherit;
+  font-size: 15px;
+  color: var(--ink, #181F2E);
+  outline: none;
+  transition: border-color .2s;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.msf-field select {
+  background-image: linear-gradient(45deg, transparent 50%, #E85D2A 50%), linear-gradient(135deg, #E85D2A 50%, transparent 50%);
+  background-position: calc(100% - 20px) 21px, calc(100% - 14px) 21px;
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+}
+.msf-field input:focus,
+.msf-field select:focus { border-color: var(--amber, #E85D2A); }
+
+.msf-error {
+  display: block;
+  margin-top: 5px;
+  font-size: 12px;
+  color: var(--rust, #A63D2F);
+}
+.msf-error--form { margin: 4px 0 12px; }
+
+/* actions */
+.msf-actions { display: flex; gap: 10px; align-items: center; margin-top: 4px; }
+.msf-next {
+  flex: 1;
+  padding: 15px 22px;
+  border: 0;
+  background: var(--amber, #E85D2A);
+  color: #fff;
+  font-family: var(--font-m, system-ui, sans-serif);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  transition: background .2s;
+}
+.msf-next:hover:not(:disabled) { background: var(--amber-dark, #C94D20); }
+.msf-next:disabled { opacity: .65; cursor: not-allowed; }
+.msf-back {
+  padding: 15px 20px;
+  border: 1px solid var(--stone-dark, #D0CBC3);
+  background: transparent;
+  color: var(--ink-muted, #666);
+  font-family: var(--font-m, system-ui, sans-serif);
+  font-size: 14px;
+  font-weight: 600;
+}
+.msf-back:hover { color: var(--ink, #181F2E); border-color: var(--ink, #181F2E); }
+
+.msf-note {
+  margin: 12px 0 0;
+  font-size: 11px;
+  line-height: 1.6;
+  color: var(--ink-muted, #666);
+}
+
+/* success */
+.msf--done { text-align: center; padding: 46px 28px; }
+.msf-tick {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--amber, #E85D2A);
+  color: #fff;
+}
+.msf--done h3 {
+  font-family: var(--font-d, var(--font-b, system-ui, sans-serif));
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--ink, #181F2E);
+}
+.msf--done p { font-size: 15px; line-height: 1.65; color: var(--ink-soft, #3B3B3B); margin: 0; }
+
+@media (max-width: 480px) {
+  .msf, .msf--done { padding: 20px 18px 18px; }
+  .msf-grid { grid-template-columns: 1fr; }
+  .msf-step-label { display: none; }
+  .msf-steps li { flex: 0 0 auto; }
+  .msf-actions { flex-wrap: wrap; }
+}

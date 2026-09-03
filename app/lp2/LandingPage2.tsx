@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, MouseEvent } from "react";
+import MultiStepForm from "../components/MultiStepForm";
 
 export default function LandingPage() {
   const [scrolled, setScrolled] = useState(false);
@@ -94,18 +95,6 @@ export default function LandingPage() {
     return () => io.disconnect();
   }, []);
 
-  useEffect(() => {
-    const s1 = document.createElement("script");
-    s1.src = "https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js";
-    s1.onload = () => {
-      const s2 = document.createElement("script");
-      s2.innerHTML = `window.jotformEmbedHandler("iframe[id='JotFormIFrame-261265264434456']", "https://form.jotform.com/")`;
-      document.body.appendChild(s2);
-    };
-    document.body.appendChild(s1);
-    return () => s1.remove();
-  }, []);
-
   const galleryRef = useRef<HTMLDivElement | null>(null);
   const scrollGallery = (dir: -1 | 1) => {
     const track = galleryRef.current;
@@ -178,17 +167,7 @@ export default function LandingPage() {
             </div>
           </div>
           <div className="form-embed">
-            <iframe
-              id="JotFormIFrame-261265264434456"
-              title="Roof Coating Deal Request"
-              onLoad={() => window.parent.scrollTo(0, 0)}
-              allowTransparency={true}
-              allow="geolocation; microphone; camera; fullscreen; payment"
-              src="https://form.jotform.com/261265264434456"
-              frameBorder={0}
-              style={{ minWidth: "100%", maxWidth: "100%", height: "539px", border: "none" }}
-              scrolling="no"
-            />
+            <MultiStepForm source="lp2" />
           </div>
         </div>
       </section>

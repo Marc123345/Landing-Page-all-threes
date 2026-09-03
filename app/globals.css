@@ -1,3 +1,4 @@
+@import "./multistep.css";
 :root{
   --white:#FFFFFF;--cream:#F7F5F1;--stone:#E5E2DB;--stone-dark:#D0CBC3;
   --blue:#181F2E;--blue-mid:#252D3F;--blue-light:#2E5F94;--blue-pale:#EDF2F7;--blue-tint:rgba(24,31,46,.04);
