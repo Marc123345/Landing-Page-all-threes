@@ -1,8 +1,20 @@
 "use client";
 
-import MultiStepForm from "../components/MultiStepForm";
+import { useEffect } from "react";
 
 export default function LP3Page() {
+  useEffect(() => {
+    const s1 = document.createElement("script");
+    s1.src = "https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js";
+    s1.onload = () => {
+      const s2 = document.createElement("script");
+      s2.innerHTML = `window.jotformEmbedHandler("iframe[id='JotFormIFrame-262455881771063']", "https://form.jotform.com/")`;
+      document.body.appendChild(s2);
+    };
+    document.body.appendChild(s1);
+    return () => s1.remove();
+  }, []);
+
   return (
     <div className="lp3-root">
       <section className="hero">
@@ -21,8 +33,18 @@ export default function LP3Page() {
               </svg>
             </div>
           </div>
-          <div className="form-embed">
-            <MultiStepForm source="lp3" />
+                    <div className="form-embed">
+            <iframe
+              id="JotFormIFrame-262455881771063"
+              title="Free Roof Assessment Request"
+              onLoad={() => window.parent.scrollTo(0, 0)}
+              allowTransparency={true}
+              allow="geolocation; microphone; camera; fullscreen; payment"
+              src="https://form.jotform.com/262455881771063"
+              frameBorder={0}
+              style={{ minWidth: "100%", maxWidth: "100%", height: "620px", border: "none" }}
+              scrolling="no"
+            />
           </div>
         </div>
         <div className="footer-strip">

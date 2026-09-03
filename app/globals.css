@@ -1,4 +1,3 @@
-@import "./multistep.css";
 :root{
   --white:#FFFFFF;--cream:#F7F5F1;--stone:#E5E2DB;--stone-dark:#D0CBC3;
   --blue:#181F2E;--blue-mid:#252D3F;--blue-light:#2E5F94;--blue-pale:#EDF2F7;--blue-tint:rgba(24,31,46,.04);
@@ -709,4 +708,22 @@ a.ft-c-item:hover{color:#fff;}
   .col-lg-6{flex:0 0 50%;max-width:50%;}
   .col-lg-7{flex:0 0 58.333333%;max-width:58.333333%;}
   .offset-lg-1{margin-left:8.333333%;}
+}
+
+/* ---------- Thank-you page ---------- */
+.ty-root{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:60px 24px;background:var(--blue);}
+.ty-card{width:100%;max-width:620px;background:#fff;border:1px solid var(--stone-dark);padding:48px 44px 40px;text-align:center;box-shadow:0 30px 80px rgba(0,0,0,.35);}
+.ty-tick{width:64px;height:64px;margin:0 auto 22px;display:flex;align-items:center;justify-content:center;background:var(--amber);color:#fff;}
+.ty-card h1{font-family:var(--font-d);font-size:34px;font-weight:800;line-height:1.15;color:var(--ink);margin-bottom:14px;}
+.ty-lead{font-size:16px;line-height:1.7;color:var(--ink-soft);margin-bottom:30px;}
+.ty-steps{list-style:none;margin:0 0 26px;padding:26px 0 0;border-top:1px solid var(--stone);text-align:left;}
+.ty-steps li{display:flex;gap:14px;align-items:flex-start;margin-bottom:16px;font-size:15px;line-height:1.6;color:var(--ink-soft);}
+.ty-steps li:last-child{margin-bottom:0;}
+.ty-steps li span{flex:0 0 auto;width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;background:var(--blue);color:#fff;font-family:var(--font-m);font-size:12px;font-weight:700;}
+.ty-note{font-size:14px;line-height:1.65;color:var(--ink-muted);padding-top:22px;border-top:1px solid var(--stone);margin-bottom:24px;}
+.ty-back{display:inline-block;padding:14px 30px;background:var(--amber);color:#fff;font-family:var(--font-m);font-size:13px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;}
+.ty-back:hover{background:var(--amber-dark);color:#fff;}
+@media(max-width:520px){
+  .ty-card{padding:34px 22px 30px;}
+  .ty-card h1{font-size:26px;}
 }
