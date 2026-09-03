@@ -151,7 +151,7 @@ export default function LandingPage5() {
                   <line x1="8" y1="23" x2="32" y2="23" stroke="var(--primary)" strokeWidth="3" strokeLinecap="square" />
                 </svg>
               </span>
-              <span className="logo-txt">Roof Coat</span>
+              <span className="logo-txt">Roof Coat Pros</span>
             </a>
           </div>
         </div>
@@ -413,7 +413,7 @@ export default function LandingPage5() {
         <div className="footer-bottom">
           <div className="wrap">
             <div className="fb-inner">
-              <p>© 2026 Roof Coat. All Rights Reserved.</p>
+              <p>© 2026 Roof Coat Pros. All Rights Reserved.</p>
             </div>
           </div>
         </div>

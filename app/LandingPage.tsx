@@ -3,7 +3,7 @@
 import { useEffect, useState, useRef, MouseEvent } from "react";
 
 export default function LandingPage({
-  brand = "Roof Coat",
+  brand = "Roof Coat Pros",
   // formId is no longer used: the Jotform embeds were all dead ("Form is
   // missing") and were replaced by MultiStepForm. Kept so the brand pages that
   // still pass it do not break; safe to remove once those are updated.

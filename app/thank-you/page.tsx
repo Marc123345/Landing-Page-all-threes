@@ -3,7 +3,7 @@ import Link from "next/link";
 import ConversionPixel from "./ConversionPixel";
 
 export const metadata: Metadata = {
-  title: "Thanks — we've got your request | Roof Coat",
+  title: "Thanks — we've got your request | Roof Coat Pros",
   description: "We've received your free roof assessment request and will be in touch shortly.",
   robots: { index: false, follow: false },
 };
